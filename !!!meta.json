@@ -1,0 +1,33 @@
+{
+	"formatVersion": 2,
+	"appVersion": "0.63.7",
+	"files": [
+		{
+			"noteId": "5CyQ6Vh1GTEX",
+			"notePath": [
+				"5CyQ6Vh1GTEX"
+			],
+			"isClone": false,
+			"title": "new note",
+			"notePosition": 10,
+			"prefix": null,
+			"isExpanded": false,
+			"type": "text",
+			"mime": "text/html",
+			"format": "markdown",
+			"dataFileName": "new note.md",
+			"noImport": false,
+			"attributes": [],
+			"attachments": [
+				{
+					"attachmentId": "rvTUh1lUgJum",
+					"title": "image.png",
+					"role": "image",
+					"mime": "image/png",
+					"position": 10,
+					"dataFileName": "new note_image.png"
+				}
+			]
+		}
+	]
+}
