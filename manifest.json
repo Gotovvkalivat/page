@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "OpsPost Knowledge Assistant Pro",
+  "version": "5.1",
+  "description": "Универсальный менеджер шаблонов с динамической привязкой, @-меню, drag-and-drop и интерактивными формами.",
+  "permissions": [
+    "storage",
+    "identity",
+    "activeTab",
+    "scripting",
+    "contextMenus"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["style.css"],
+      "matches": ["http://*/*", "https://*/*"]
+    }
+  ],
+  "commands": {
+    "open-search": {
+      "suggested_key": {
+        "default": "Ctrl+Space",
+        "mac": "Ctrl+Space"
+      },
+      "description": "Открыть умный поиск шаблонов"
+    }
+  }
+}
