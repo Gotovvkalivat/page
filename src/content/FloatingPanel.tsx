@@ -51,7 +51,6 @@ function setNativeValue(element: HTMLTextAreaElement | HTMLInputElement, value: 
   const isTextArea = element.tagName === 'TEXTAREA'
   const proto = isTextArea ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype
   const valueSetter = Object.getOwnPropertyDescriptor(proto, 'value')?.set
-  const currentVal = element.value
 
   if (valueSetter) valueSetter.call(element, value)
   else element.value = value

@@ -2,16 +2,15 @@ import React from 'react'
 import { useAppStore } from '@/store'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
 import { Switch } from '@/components/ui/switch'
 import { Badge } from '@/components/ui/badge'
-import { ToastContainer, showToast } from '@/components/ui/toast'
+import { ToastContainer } from '@/components/ui/toast'
 import { TemplateCard } from '@/components/base/TemplateCard'
 import { TemplateEditor } from '@/components/base/TemplateEditor'
 import { BindingsPanel } from '@/components/base/BindingsPanel'
 import { TagFilter } from '@/components/base/TagFilter'
 import { showToast as showToastEvent } from '@/components/ui/toast'
-import { Search, Download, Upload, Cloud, CloudDownload, Plus, Star, Grid3x3 as Grid3X3, Settings, X } from 'lucide-react'
+import { Search, Download, Upload, Cloud, CloudDownload, Plus, Star, X } from 'lucide-react'
 import type { Template } from '@/types'
 
 export function KnowledgeBase() {
@@ -23,7 +22,6 @@ export function KnowledgeBase() {
     updateTemplate,
     deleteTemplate,
     toggleFavorite,
-    reorderTemplates,
     importTemplates,
   } = useAppStore()
 
@@ -121,10 +119,6 @@ export function KnowledgeBase() {
     }
     setEditingTemplate(null)
     setIsCreating(false)
-  }
-
-  const handleReorder = (newOrder: string[]) => {
-    reorderTemplates(newOrder)
   }
 
   return (

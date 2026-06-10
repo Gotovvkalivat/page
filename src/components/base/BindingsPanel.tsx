@@ -1,4 +1,3 @@
-import React from 'react'
 import { useAppStore } from '@/store'
 import { Button } from '@/components/ui/button'
 import { Trash2, ExternalLink } from 'lucide-react'

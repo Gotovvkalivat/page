@@ -4,6 +4,7 @@
   "description": "Modern knowledge base template manager Chrome extension",
   "type": "module",
   "scripts": {
+    "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit"

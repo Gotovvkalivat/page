@@ -4,7 +4,6 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { X, Save } from 'lucide-react'
 import type { Template } from '@/types'
-import { cn } from '@/lib/utils'
 
 interface TemplateEditorProps {
   template: Template | null

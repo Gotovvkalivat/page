@@ -91,7 +91,7 @@ async function findDriveFile(token: string): Promise<{ id: string } | null> {
 }
 
 // Handle messages from popup and content scripts
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+chrome.runtime.onMessage.addListener((request, _sender, sendResponse) => {
   // Save to Google Drive
   if (request.type === 'SAVE_TO_DRIVE') {
     chrome.identity.getAuthToken({ interactive: true }, async (token) => {

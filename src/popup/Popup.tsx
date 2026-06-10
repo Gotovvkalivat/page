@@ -8,7 +8,6 @@ import { useAppStore } from '@/store'
 import { TemplateList } from '@/components/popup/TemplateList'
 import { BindingsList } from '@/components/popup/BindingsList'
 import { ExternalLink, Search, Download, Upload, Cloud, CloudDownload, Crosshair, CircleHelp as HelpCircle, List, Settings } from 'lucide-react'
-import type { Template } from '@/types'
 
 export function Popup() {
   const { settings, updateSettings, exportTemplates, importTemplates, syncFromDrive, syncToDrive } = usePopupActions()
@@ -227,7 +226,7 @@ export function Popup() {
 }
 
 function usePopupActions() {
-  const { templates, bindings, settings, updateSettings, addToast, importTemplates: importToStore } = useAppStore()
+  const { templates, settings, updateSettings, importTemplates: importToStore } = useAppStore()
 
   const exportTemplates = React.useCallback(() => {
     const blob = new Blob([JSON.stringify(templates, null, 2)], { type: 'application/json' })

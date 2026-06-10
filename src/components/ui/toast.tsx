@@ -8,7 +8,7 @@ interface ToastProps {
   onRemove: (id: string) => void
 }
 
-export function Toast({ toast, onRemove }: ToastProps) {
+export function Toast({ toast }: ToastProps) {
   return (
     <div
       className={cn(
