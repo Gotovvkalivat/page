@@ -1,93 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpsPost Popup</title>
 </head>
-<body id="popup-root" class="ops-popup-body">
-    <div class="p-header">
-        <div class="p-title"><i class="fa fa-briefcase"></i> База ответов</div>
-        <div class="p-header-actions">
-            <span class="p-version">v5.1 Pro</span>
-        </div>
-    </div>
-    
-    <div class="p-tabs">
-        <button class="p-tab active" data-tab="templates"><i class="fa fa-list"></i> Шаблоны</button>
-        <button class="p-tab" data-tab="settings"><i class="fa fa-gear"></i> Настройки</button>
-        <button class="p-tab" data-tab="help"><i class="fa fa-question-circle"></i> Инструкции</button>
-    </div>
-
-    <div id="tab-templates" class="p-tab-content active">
-        <button id="pop-open-base" class="btn-action primary-action">
-            <i class="fa fa-external-link"></i> Открыть Базу Знаний
-        </button>
-        <input type="text" id="pop-search" class="search-box" placeholder="Поиск шаблона по названию, тегу...">
-        <div id="pop-list" class="tpl-list"></div>
-    </div>
-
-    <div id="tab-settings" class="p-tab-content">
-        <div class="settings-section">
-            <h4>Внешний вид</h4>
-            <label class="theme-switch">
-                <input type="checkbox" id="pop-theme-switch">
-                <span class="slider"></span>
-                <span>Тёмная тема</span>
-            </label>
-        </div>
-        <div class="settings-section">
-            <h4>Поведение</h4>
-            <label class="theme-switch" style="margin-bottom: 8px;">
-                <input type="checkbox" id="pop-at-menu-switch">
-                <span class="slider"></span>
-                <span>Включить @-меню (ввод @ для поиска шаблонов)</span>
-            </label>
-        </div>
-        <div class="settings-section">
-            <h4>Управление данными</h4>
-            <div class="backup-grid">
-                <button id="pop-export" class="btn-action"><i class="fa fa-download"></i> Экспорт</button>
-                <button id="pop-import" class="btn-action"><i class="fa fa-upload"></i> Импорт</button>
-                <button id="pop-drive-save" class="btn-action drive-btn"><i class="fa fa-google"></i> В Диск</button>
-                <button id="pop-drive-load" class="btn-action drive-btn"><i class="fa fa-refresh"></i> Из Диска</button>
-            </div>
-            <input type="file" id="pop-file-hidden" accept=".json" style="display: none;">
-        </div>
-        <div class="settings-section">
-            <h4>Привязка к CRM</h4>
-            <button id="pop-map-trigger" class="btn-action" style="width:100%;"><i class="fa fa-crosshairs"></i> Привязать поле ввода</button>
-            <div class="p-section-title">Активные привязки</div>
-            <div id="pop-bindings-list" class="pop-bindings-list"></div>
-        </div>
-        <div class="settings-section">
-            <h4>Горячие клавиши</h4>
-            <ul class="hotkeys-list">
-                <li><kbd>Ctrl</kbd> + <kbd>Пробел</kbd> — Умный поиск шаблонов</li>
-                <li><kbd>@</kbd> в любом поле — вызов меню шаблонов</li>
-                <li><kbd>Ctrl</kbd> + <kbd>Enter</kbd> — Вставить и отправить (в редакторе)</li>
-                <li><kbd>Esc</kbd> — Закрыть любое окно расширения</li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="tab-help" class="p-tab-content">
-        <div class="help-content">
-            <h4><i class="fa fa-magic"></i> Шорткоды</h4>
-            <p>Напишите в любом текстовом поле <code>/слово</code> и оно автоматически заменится на соответствующий шаблон (если есть совпадение по названию).</p>
-            <h4><i class="fa fa-at"></i> @-меню</h4>
-            <p>Введите <code>@</code> и начните печатать название шаблона – появится всплывающий список. Выбирайте стрелками и Enter.</p>
-            <h4><i class="fa fa-user-circle"></i> Переменные</h4>
-            <p>Используйте <code>{{ИмяПеременной}}</code> в шаблоне. При вставке появится запрос на заполнение.</p>
-            <h4><i class="fa fa-calendar"></i> Динамическая дата</h4>
-            <p><code>{{date}}</code> — подставит текущую дату в формате ДД.ММ.ГГГГ.</p>
-            <h4><i class="fa fa-star"></i> Избранное</h4>
-            <p>Отмеченные звёздочкой шаблоны отображаются в плавающей панели при фокусе на поле ввода.</p>
-            <h4><i class="fa fa-tags"></i> Категории</h4>
-            <p>Назначайте теги шаблонам и фильтруйте по ним в Базе знаний.</p>
-        </div>
-    </div>
-
-    <script src="popup.js"></script>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/popup/main.tsx"></script>
 </body>
 </html>
