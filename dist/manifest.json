@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "OpsPost Knowledge Assistant Pro",
+  "version": "6.0.0",
+  "description": "Modern template manager with dynamic binding, @-menu, drag-and-drop, and interactive forms.",
+  "permissions": [
+    "storage",
+    "identity",
+    "activeTab",
+    "scripting",
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "https://www.googleapis.com/*"
+  ],
+  "background": {
+    "service_worker": "src/background/index.ts",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["src/content/index.tsx"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "OpsPost Knowledge Assistant"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/*"],
+      "matches": ["http://*/*", "https://*/*"]
+    }
+  ],
+  "commands": {
+    "open-search": {
+      "suggested_key": {
+        "default": "Ctrl+Space",
+        "mac": "Ctrl+Space"
+      },
+      "description": "Open smart template search"
+    }
+  }
+}
