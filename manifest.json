@@ -14,13 +14,13 @@
     "https://www.googleapis.com/*"
   ],
   "background": {
-    "service_worker": "src/background/index.ts",
+    "service_worker": "src/background/index.js",
     "type": "module"
   },
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
-      "js": ["src/content/index.tsx"]
+      "js": ["src/content/index.js"]
     }
   ],
   "action": {
