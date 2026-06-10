@@ -7,7 +7,7 @@ import { ToastContainer, showToast } from '@/components/ui/toast'
 import { useAppStore } from '@/store'
 import { TemplateList } from '@/components/popup/TemplateList'
 import { BindingsList } from '@/components/popup/BindingsList'
-import { ExternalLink, Search, Download, Upload, Cloud, CloudDownload, Crosshair, HelpCircle, List, Settings } from 'lucide-react'
+import { ExternalLink, Search, Download, Upload, Cloud, CloudDownload, Crosshair, CircleHelp as HelpCircle, List, Settings } from 'lucide-react'
 import type { Template } from '@/types'
 
 export function Popup() {

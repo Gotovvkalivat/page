@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { cn } from '@/lib/utils'
 import type { Toast as ToastType } from '@/types'
-import { CheckCircle, XCircle, Info } from 'lucide-react'
+import { CircleCheck as CheckCircle, Circle as XCircle, Info } from 'lucide-react'
 
 interface ToastProps {
   toast: ToastType

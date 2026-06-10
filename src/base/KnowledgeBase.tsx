@@ -11,18 +11,7 @@ import { TemplateEditor } from '@/components/base/TemplateEditor'
 import { BindingsPanel } from '@/components/base/BindingsPanel'
 import { TagFilter } from '@/components/base/TagFilter'
 import { showToast as showToastEvent } from '@/components/ui/toast'
-import {
-  Search,
-  Download,
-  Upload,
-  Cloud,
-  CloudDownload,
-  Plus,
-  Star,
-  Grid3X3,
-  Settings,
-  X,
-} from 'lucide-react'
+import { Search, Download, Upload, Cloud, CloudDownload, Plus, Star, Grid3x3 as Grid3X3, Settings, X } from 'lucide-react'
 import type { Template } from '@/types'
 
 export function KnowledgeBase() {
